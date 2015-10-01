@@ -1,0 +1,22 @@
+{
+  "name": "colectifacil",
+  "version": "0.0.1",
+  "homepage": "https://github.com/hirosmans/colectifacil",
+  "authors": [
+    "victor riveros <hirosmans@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-full": "~1.4.5",
+    "angular-google-maps": "~2.2.1",
+    "bootstrap": "~3.3.5",
+    "ngGeolocation": "~0.0.8"
+  }
+}

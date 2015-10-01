@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap-theme.css')
+    script(src='/bower_components/lodash/lodash.js')
+    script(src='/bower_components/angular-full/angular.js')
+    script(src='/bower_components/jquery/dist/jquery.js')
+    script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
+    script(src='/bower_components/angular-simple-logger/dist/index.js')
+    script(src='/bower_components/angular-google-maps/dist/angular-google-maps.js')
+    script(src='//maps.googleapis.com/maps/api/js?sensor=false')
+    script(src='/bower_components/ngGeolocation/ngGeolocation.js')
+    script(src='/javascripts/app/app.js')
+    script(src='/javascripts/app/controller/landing_controller.js')
+
+  body(ng-app='colectifacil')
+    block content
+    nav.navbar.navbar-fixed-top.navbar-primary
+        .container
+          .navbar-header
+            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand(href='#') colectifacil
+          #navbar.navbar-collapse.collapse
+            ul.nav.navbar-nav
+              li: a inicio
+              li: a live map
+              li: a contacto
+              li: a sobre colectifacil
