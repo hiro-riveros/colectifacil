@@ -5,10 +5,13 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.css')
     link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap-theme.css')
+    link(rel='stylesheet', href='/bower_components/font-awesome/css/font-awesome.css')
     script(src='/bower_components/lodash/lodash.js')
     script(src='/bower_components/angular-full/angular.js')
     script(src='/bower_components/jquery/dist/jquery.js')
     script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
+    script(src='/bower_components/moment/moment.js')
+    script(src='/bower_components/moment/locale/es.js')
     script(src='/bower_components/angular-simple-logger/dist/index.js')
     script(src='/bower_components/angular-google-maps/dist/angular-google-maps.js')
     script(src='//maps.googleapis.com/maps/api/js?sensor=false')
@@ -16,8 +19,10 @@ html
     script(src='/bower_components/angular-ui-router/release/angular-ui-router.js')
     script(src='/bower_components/angular-bootstrap/ui-bootstrap.js')
     script(src='/bower_components/angular-bootstrap/ui-bootstrap-tpls.js')
+    script(src='/bower_components/angular-moment/angular-moment.js')
     script(src='/bower_components/socket.io-client/socket.io.js')
     script(src='/javascripts/app/app.js')
+    script(src='/javascripts/app/run/moment_run.js')
     script(src='/javascripts/app/config/router.js')
     script(src='/javascripts/app/controller/landing_controller.js')
     script(src='/javascripts/app/controller/contact_controller.js')
@@ -42,8 +47,8 @@ html
             a.navbar-brand(href='#') colectifacil
           #navbar.navbar-collapse.collapse
             ul.nav.navbar-nav
-              li: a inicio
-              li: a live map
+              li: a(href='/') inicio
+              li: a(href='/') live map
               li: a(href='contact') contacto
               li: a(href='about') sobre colectifacil
               li: a(href='companies') empresas
