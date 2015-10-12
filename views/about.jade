@@ -1,0 +1,30 @@
+extends layout
+
+block content
+	div.container
+		div.row
+			div.col-md-12.col-sm-12.col-xs-12
+				div.title-about
+					h4.text-center colectifacil
+				div.content
+					p.text-justify colectifacil title is a project conducted by students of Inacap to start the project you need nodejs must have installed on your computer
+					p.text-justify if you don’t have installed nodejs you need to do this.
+					p.text-justify first you need to install nodejs
+					p.text-justify download here
+						a(href='https://nodejs.org/en/')  nodejs
+					p.text-justify then you need to install bower run 
+					p.text-justify
+						code npm install -g bower
+					p.text-justify second clone project
+					p.text-justify run 
+						code git clone https://github.com/hirosmans/colectifacil.git
+					p.text-justify go to directory project run
+						code cd path/to/your/project/
+					p.text-justify install dependencies run
+						code npm install && bower install
+					p.text-justify now run this if your a mac developer
+						code DEBUG=app npm start
+						| to start express server.
+					p.text-justify or run this if your pussy windows developer
+						code set DEBUG=app & npm start
+						| in you web browser enter localhost:3000.

@@ -1,5 +1,5 @@
 extends layout
 
 block content
-  div(ng-controller='landingController')
-    ui-gmap-google-map(center='map.center', zoom='map.zoom')
+	div.landingController(ng-controller='LandingController')
+		ui-gmap-google-map(center='map.center', zoom='map.zoom')

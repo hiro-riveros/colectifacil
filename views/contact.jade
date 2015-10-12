@@ -1,0 +1,17 @@
+extends layout
+
+block content
+	div.landingController(ng-controller='ContactController')
+		ui-gmap-google-map(center='map.center', zoom='map.zoom' options='options')
+		div.transparent-content
+			div.title-contact
+				h1.text-center colectifacil
+			div.content
+				div.form-group
+					input.form-control(type='text' placeholder='hirochi' ng-model='contact.name')
+				div.form-group
+					input.form-control(type='email' placeholder='user@colectifacil.com' ng-model='contact.email')
+				div.form-group
+					textarea.form-control(placeholder='deja tu comentario' rows='9' cols='50' ng-model='contact.message')
+				div.form-group
+					button.btn.btn-success.btn-block(ng-click='sendContact()') enviar mensaje
