@@ -1,6 +1,6 @@
 script(type='text/ng-template', id='login.html').
 	<div class="modal-header">
-		<h3 class="modal-title">login</h3>
+		<h5 class="modal-title">login</h5>
 	</div>
 	<div class="modal-body">
 		<div class="container-fluid">
@@ -19,17 +19,17 @@ script(type='text/ng-template', id='login.html').
 									 class="form-control" 
 									 ng-model="user.password">
 					</div>
-					<div class="col-md-6 col-sm-6 col-xs-6">
-						<div class="form-group">
-							<button class="btn btn-primary btn-block">login</button>
-						</div>  
-					</div>
-					<div class="col-md-6 col-sm-6 col-xs-6">
-						<div class="form-group">
-							<button class="btn btn-primary btn-block" ng-click="login()">login</button>
+					<div class="form-group">
+							<button class="btn btn-login btn-block" ng-click="login()">login</button>
+					</div>  
+					<div class="col-md-12 col-sm-12 col-xs-12 text-center">
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<button class="btn btn-xs btn-primary"><i class="fa fa-facebook-official"></i></button>
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<button class="btn btn-xs btn-info"><i class="fa fa-twitter"></i></button>
 						</div>
 					</div>
-
 				</div>
 			</div>
 		</div>
