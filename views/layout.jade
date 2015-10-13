@@ -53,6 +53,8 @@ html
               li: a(href='about') sobre colectifacil
               li: a(href='companies') empresas
             ul.nav.navbar-nav.navbar-right
-              li: a(ng-click='lunchModal()') login
-              li: a(ng-show='false') logout
-    include ./login.jade
+              li: a(ng-click='lunchModal("signup", "lg")') sign up
+              li: a(ng-click='lunchModal("signin", "sm")') sing in
+              li: a(ng-show='false') sign out
+    include ./signin.jade
+    include ./signup.jade

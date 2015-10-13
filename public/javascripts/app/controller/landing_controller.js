@@ -20,7 +20,7 @@
 					latitude: position.coords.latitude,
 					longitude: position.coords.longitude
 				},
-				zoom: 18
+				zoom: 14
 			};
 			console.info('Landing call Nº: ' + firstCall + ' - ' +  JSON.stringify($scope.map.center));
 		});
@@ -48,24 +48,18 @@
 		};
 
 		/* LUNCH MODAL INSTANCE FOR LOGIN */
-		$scope.lunchModal = function(){
-			$scope.page; 
-			$http({ method: 'GET', url: '/angularTemplates', params: { page: 'login' }}).then(function (response){
-				$scope.page = response;
+		$scope.lunchModal = function(type, size){	
 				var modalInstance = $uibModal.open({
 					animation: true,
-					templateUrl: 'login.html',
+					templateUrl: type + '.html',
 					controller: 'AuthController',
-					size: 'sm'
+					size: size
 				});
 
 				modalInstance.result.then(function () {
 				}, function () {
 					$log.info('Modal dismissed at: ' + new Date());
 				});				
-			}, function (error){
-				$log.error(error);
-			});
 		};
 
 	}]);

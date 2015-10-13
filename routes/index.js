@@ -17,7 +17,6 @@ router.get('/contact', function(req, res, next) {
 });
 
 router.post('/contact', function(req, res, next) {
-	var elements = [];
 	if (req.body.name === '' || req.body.name === undefined) {
 		req.body.name = 'no name';
 	};
@@ -26,10 +25,12 @@ router.post('/contact', function(req, res, next) {
 			return console.error('error fetching client from pool', err);
 		};
 
-		var query = client.query('INSERT INTO "easy-coleto-web".contacs (name, email, message) VALUES($1, $2, $3)', [req.body.name, req.body.email, req.body.message]);
+		var query = client.query('INSERT INTO "easy-coleto-web".contacs (name, email, message) VALUES($1, $2, $3)', 
+			[req.body.name, req.body.email, req.body.message]);
 		query.on('end',  function(){
 			done();
 			return res.send('ok');
+			next();
 		});
 	});
 });
